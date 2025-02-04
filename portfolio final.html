@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="portfolio final.css">
+</head>
+<body>
+    <div id="header">
+       <div class="container">
+        <header class="header">
+            <div class="logo">
+                <span class="logo-text">Eleen.</span>
+            </div>
+        <nav>
+            <ul class="sidemenu" id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+       </div> 
+       <div class="header-content">
+        <div class="header-text">
+            <p>Hello!</p>
+            <h1>I am  Rayhana Eirtyza <span>Eleen</span> from Chittagong </h1>
+
+           </div>
+           <div>
+            <img src="pics/eleen-final.jpg" alt="" class="profile-img">
+           </div>
+       </div>
+       <!-- ---------about---------- -->
+       <div id="about">
+        <div class="container">
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a student pursuing a BSC in Computer Engineering at Premier University,Chittagong.
+                        I am currently in my third semester.i have a self motivated and can do attitude,thriving and 
+                        challenging and dynamic environments.
+                        I am very much passionate to learn new stuff that interests me and can help me get better. </p>
+                        <div class="tab-titles">
+                            <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+                            <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                            <div class="tab-links" onclick="opentab('education')">Education</div>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2025-Current</span><br>Web app Development Training at Premier University.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2025</span><br>Web app Development Training at Premier University</li>
+                            </ul>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+       </div>
+       
+       <!-- ---------------------contact------------------ -->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title1">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i> eleeneirtyza@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i> 01798442150</p>
+                        <div class="social-icons">
+                           
+                               <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <a href="" class="btn">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form >
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Eleen. All rights reserved.</p>
+
+        </div>
+
+   <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+   </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
